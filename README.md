@@ -52,6 +52,8 @@ Make sure you have installed all of the following prerequisites on your developm
 * Python - [Download & Install Python3](https://www.geeksforgeeks.org/download-and-install-python-3-latest-version/) 
 * ROS - [Download & Install ROS](https://wiki.ros.org/ROS/Installation).You can use ROS or ROS2.Here I'm using ROS Noetic since the quadruped was inbuilt with it.
 
+![Quadruped robot](https://github.com/prahalad12345/HoloQuadruped-Application/blob/main/Images/Puppypi.jpg)
+
 
 ## Installation
 
