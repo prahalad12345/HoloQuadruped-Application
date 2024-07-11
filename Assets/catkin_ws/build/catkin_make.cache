@@ -1,0 +1,2 @@
+puppy_control2:ros_tcp_endpoint
+-DCATKIN_DEVEL_PREFIX=/home/pi/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/pi/catkin_ws/install -G Unix Makefiles

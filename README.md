@@ -16,6 +16,9 @@
 HoloQuadraped is Hololens2 application used to navigate and control the quadruped robot. The application provides quadraped action control , Control servos on the quadruped's leg and a camera view with navigation panel to control the robots motion.
 
 ## Purpose of HoloQuadruped?
+
+![Head Track Menu](https://github.com/prahalad12345/HoloQuadruped-Application/blob/main/Images/Introscreen.PNG)
+
 * Navigating through terrains that is inaccessible to humans can be accomplished using this app on the Hololens2. The apps control are designed to be easy and user-friendly.
 * Holoquadruped is an app designed to integrate robotics development,ROS(Robotic operating system) and Unity. This project offers a user interface that facilitates easy communication between the Hololens mixed reality features and a quadruped robot.
 
@@ -25,9 +28,15 @@ The user is provided with a head tracking menu with 3 options
 
 1. Servo Controller : Menu provides control of the motors on the Quadruped based on the coordinate system (X-Z axis). Have sliders to control the X axis and Z axis. A model of the Quadruped is provided for easier interaction.
 
+![Servo Controller](https://github.com/prahalad12345/HoloQuadruped-Application/blob/main/Images/ServoController.PNG)
+
 2. Action Controller : Menu provides some 25 actions which was prebuilt into the Quadruped .This menu provides buttons interlinked to the action.
 
+![Action Controller](https://github.com/prahalad12345/HoloQuadruped-Application/blob/main/Images/ActionController.PNG)
+
 3. Camera and Motion Controller : Menu provides control pad to move the robot forward , back ,left ,right and an emergency stop  button. An eye camera view of the Quadruped is also provided.
+
+![Motion Controller](https://github.com/prahalad12345/HoloQuadruped-Application/blob/main/Images/MotionController.PNG)
 
 ## Prerequisites
 Make sure you have installed all of the following prerequisites on your development machine:
@@ -48,13 +57,11 @@ Make sure you have installed all of the following prerequisites on your developm
 
 **1. Host PC setup:**
 
-Create a new 3D project on Unity . Download the MixedRealityFeatureTool,add all the MRTK3 package and apply the change on the unity repository.Follow [Module 1(upto Interaction Module)](https://learn.microsoft.com/en-us/training/modules/learn-mrtk-tutorials/) for the setup on the unity project. 
+Clone this unity repository which consist of the complete HoloQuadruped App. Add this project to the Unity Hub.The project is preinstalled with MRTK3 which enables Mixed reality development features and ROS-TCP-Connector ,the Robotics package on Unity which are to be used to enable ROS features to help you communicate with the robot.
 
-Include the Robotics package on Unity which are to be used to enable ROS features.ROS-TCP-Connector is the package used for communication with the Robot([Installation](https://github.com/Unity-Technologies/Unity-Robotics-Hub/blob/main/tutorials/quick_setup.md)).On the menubar click on Robotics-> ROS Settings and set the IP address of the edge device.
+![MRTK3](https://github.com/prahalad12345/HoloQuadruped-Application/blob/main/Images/MixedRealityWindow.PNG)
 
-Clone this repository and extract the Asset folder which consist of the Prefab,Materials,Messages etc. which were used in this project.Drag and Drop every Prefab,Material, Messages and Scripts.
-
-
+Go to Assets->Scene . Click on SampleScene to enable access to the application.
 
 **2. Quadruped Robot(Edge device)**
 
@@ -65,7 +72,7 @@ roslaunch ros_tcp_endpoint endpoint.launch
 ```
 
 Move the puppy_control2 folder (in the ROS folder of my github repo) to the catkin workspace and catkin make.Python Libraries used in the edge device is already provided with the quadruped.Mainly used packages are GPIO and OpenCV(for camera vision).
-Run the three ros files for each of the controller(You can also create a launch file for the three).
+Run the three ros files for each of the controller(You can also create a launch file for the three).Remove the catkin_ws folder in Assets.
 
 ```bash
 rosrun puppy_control2 actionsubscriber.py
